@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="icon" href="/favicon.png">
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>   
+
+    <div class="container">
+        <div class="hero">
+            <h1>Hola Amiwis 👋</h1>
+            <p>Sample page 📃</p>
+        </div>
+        <div class="logo">
+            <img src="images/logo.svg" loading="lazy" alt="">
+        </div>
+    </div>
+    <script type="text/javascript">
+        document.addEventListener('click', function (event) {
+            const x = event.clientX / window.innerWidth;
+            const y = event.clientY / window.innerHeight;
+            confetti({
+                origin: { x, y }
+            });
+        });
+        confetti();
+    </script>
+</body>
